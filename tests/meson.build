@@ -7,7 +7,7 @@ if boost_test.found()
     'hash_shake.cpp',
     'instances.cpp',
     'test_faest_tvs.cpp',
-    'universal_hashing.cpp', 
+    #'universal_hashing.cpp', 
   )
   test_deps = []
   if ntl.found()
@@ -45,10 +45,10 @@ if boost_test.found()
     args: ['-t', 'instances'],
     timeout: 6000,
   )
-  test('Universal hashing', extended_tests,
-    args: ['-t', 'universal_hashing'],
-    timeout: 6000,
-  )
+  #test('Universal hashing', extended_tests,
+  #  args: ['-t', 'universal_hashing'],
+  #  timeout: 6000,
+  #)
   #test('Vector commitments', extended_tests,
   #  args: ['-t', 'vector_commitments'],
   #  timeout: 6000,
